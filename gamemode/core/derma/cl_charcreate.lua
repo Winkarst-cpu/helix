@@ -201,7 +201,9 @@ function PANEL:Init()
 			return
 		end
 
-		if (LocalPlayer():GetCharacter()) then
+		local client = LocalPlayer()
+
+		if (client:GetCharacter()) then
 			parent.mainPanel:Undim()
 			parent:ShowNotice(2, L("charCreated"))
 		elseif (id) then
